@@ -1,0 +1,8 @@
+h1 Hello world!
+p Time to test some cache
+
+- cache 'some good cache', expires_in: 5.minutes do
+  p I want this cache to work in development, even if config.perform_caching = false
+  p
+    | time to check:
+    =< Time.zone.now
