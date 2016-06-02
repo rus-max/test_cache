@@ -1,4 +1,8 @@
 h1 Hello world!
 p Time to test some cache
 
-= some_good_cache_block(5.seconds) { render 'cached_block' }
+= dev_cache 'some good cache', expires_in: 5.seconds do
+  p I want this cache to work in development, even if config.perform_caching = false
+  p
+    | time to check:
+    =< Time.zone.now
